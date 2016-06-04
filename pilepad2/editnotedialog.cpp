@@ -1,3 +1,4 @@
+#include "helper_functions.h"
 #include "editnotedialog.h"
 #include "ui_editnotedialog.h"
 #include <QShortcut>
@@ -23,6 +24,9 @@ EditNoteDialog::EditNoteDialog(QWidget *parent) :
 
     QShortcut* shortcut4 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_S), ui->noteBodyEdit);
     connect(shortcut4, SIGNAL(activated()), this, SLOT(slotSaveShortcut()));
+
+    QShortcut* shortcut5 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_P), ui->noteBodyEdit);
+    connect(shortcut5, SIGNAL(activated()), this, SLOT(slotPasteRandomPassword()));
 
     ui->noteTitleEdit->setFocus();
 }
@@ -56,6 +60,13 @@ void EditNoteDialog::slotPasteHorizonLineToEditor(){
     ui->noteBodyEdit->insertPlainText("------------------------------");
 
 }
+
+void EditNoteDialog::slotPasteRandomPassword(){
+
+    ui->noteBodyEdit->insertPlainText(generateRandomPassword());
+
+}
+
 
 void EditNoteDialog::slotPasteDoubleHorizonLineToEditor(){
 

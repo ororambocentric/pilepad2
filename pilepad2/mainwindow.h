@@ -9,6 +9,7 @@
 #include "keytranslator.h"
 #include "editorhistory.h"
 
+
 struct CurrentNote{
     int id;
     QString title;
@@ -58,6 +59,7 @@ public slots:
     void slotPasteHorizonLineToEditor();
     void slotPasteDoubleHorizonLineToEditor();
     void slotPasteDateToEditor();
+    void slotPasteRandomPassword();
 
     void slotEditorHistoryGoBack();
     void slotEditorHistoryGoForward();

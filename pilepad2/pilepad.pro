@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     core.cpp \
     note.cpp \
     qmyhighlighter.cpp \
-    editorhistory.cpp
+    editorhistory.cpp \
+    helper_functions.cpp
 
 HEADERS  += mainwindow.h \
     editnotedialog.h \
@@ -28,7 +29,8 @@ HEADERS  += mainwindow.h \
     note.h \
     keytranslator.h \
     qmyhighlighter.h \
-    editorhistory.h
+    editorhistory.h \
+    helper_functions.h
 
 FORMS    += mainwindow.ui \
     editnotedialog.ui

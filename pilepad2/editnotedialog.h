@@ -27,6 +27,7 @@ public:
 public slots:
 
     void slotPasteHorizonLineToEditor();
+    void slotPasteRandomPassword();
     void slotPasteDoubleHorizonLineToEditor();
     void slotPasteDateToEditor();
     void slotSaveShortcut();

@@ -1,3 +1,4 @@
+#include "helper_functions.h"
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "editnotedialog.h"
@@ -84,6 +85,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QShortcut* shortcut8 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_Period), ui->plainTextEditEditorNoteBody);
     connect(shortcut8, SIGNAL(activated()), this, SLOT(slotEditorHistoryGoForward()));
+
+    QShortcut* shortcut9 = new QShortcut(QKeySequence(Qt::CTRL + Qt::Key_P), ui->plainTextEditEditorNoteBody);
+    connect(shortcut9, SIGNAL(activated()), this, SLOT(slotPasteRandomPassword()));
 
     connect(listWidgetNotesMenu->actions()[0], SIGNAL(triggered()), this, SLOT(on_listWidgetNotes_contextDeleteNote()));
 
@@ -766,6 +770,12 @@ void MainWindow::on_listWidgetNotes_itemSelectionChanged()
 void MainWindow::slotPasteHorizonLineToEditor(){
 
     ui->plainTextEditEditorNoteBody->insertPlainText("------------------------------");
+
+}
+
+void MainWindow::slotPasteRandomPassword(){
+
+    ui->plainTextEditEditorNoteBody->insertPlainText(generateRandomPassword());
 
 }
 

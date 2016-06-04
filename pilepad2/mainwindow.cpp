@@ -213,7 +213,7 @@ void MainWindow::closeEvent(QCloseEvent *event){
 }
 
 void MainWindow::slotAbout(){
-    QMessageBox::about(0, "About Pilepad", "Pilepad\n\nver. 2.0.0\n\n© 2014 Sergey [idzn] Tolokonnikov\nidzn@yandex.ru");
+    QMessageBox::about(0, "About Pilepad", "Pilepad\n\nver. 2.0.0\n\n© 2014 - 2016 Sergey Tolokonnikov\nororambocentric@yandex.ru");
 }
 
 void MainWindow::slotExit(){

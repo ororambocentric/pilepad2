@@ -1,2 +1,2 @@
 # pilepad2
-Note manager
+Notes manager
